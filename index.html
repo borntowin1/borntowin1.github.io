@@ -1,17 +1,139 @@
+
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title>验证用户输入的密码</title>
-        
-	</head>
-	<body>
-	<script>
-          var password = prompt('请输入密码:');
-          if (password =='123456') {
-          	alert('密码输入正确!');
-          }else{
-          	alert('密码输入错误!');
-          }
-      </script></body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        td {
+            border: solid 1px black;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body onload="changeColor();">
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <script>
+        var oTds = document.getElementsByTagName("td");
+        for (var i = 0; i < oTds.length; i++) {
+            oTds[i].style.backgroundColor = getColor(i);
+        }
+        function getColor(i) {
+            return "hsl(" + i * 4 + ",50%,50%)";
+        }
+        function changeColor(){
+            var t=oTds[80].style.backgroundColor;
+            for(var i=80;i>0;i--){
+                oTds[i].style.backgroundColor=oTds[i-1].style.backgroundColor;
+            }
+            oTds[0].style.backgroundColor=t;
+
+        }
+    </script>
+</body>
+
 </html>
